@@ -19,7 +19,6 @@ jobs:
           POSTGRES_PASSWORD: password
         ports:
           - 5432:5432
-
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -43,6 +42,11 @@ jobs:
       run: |
         cd inventory_service
         pytest
+
+    - name: Install dependencies for order service
+      run: |
+        cd order_service
+        pip install -r requirements.txt
 
     - name: Run integration tests for order service
       run: |
