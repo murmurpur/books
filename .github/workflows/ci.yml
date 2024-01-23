@@ -38,3 +38,13 @@ jobs:
       run: |
         cd inventory_service
         pip install -r requirements.txt
+
+    - name: Run unit and integration tests for inventory service
+      run: |
+        cd inventory_service
+        pytest
+
+    - name: Run integration tests for order service
+      run: |
+        cd order_service
+        pytest
