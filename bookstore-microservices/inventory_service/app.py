@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from models import db, Book
-#hello
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db.init_app(app)
