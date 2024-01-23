@@ -11,4 +11,3 @@ services:
       - "6000:6000"
     depends_on:
       - inventory-service
-#hello
